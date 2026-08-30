@@ -3,44 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - My Portfolio</title>
+    <title>About Me - A.ABD SAMAD FAQIH.H</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="logo">My<span>Portfolio</span></div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="portfolio.html">Portofolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-<div class="container">
-    <section class="section">
-        <h2>About Me</h2>
-        <img class="profile" src="https://via.placeholder.com/185" alt="Foto saya">
-        <p>
-            Saya adalah mahasiswa Teknik Komputer yang memiliki ketertarikan
-            pada teknologi, pemrograman, dan pengembangan website.
-        </p>
-        <p>
-            Saat ini saya sedang mempelajari dasar HTML dan CSS dan mencoba
-            menerapkannya melalui tugas-tugas dan proyek sederhana.
-        </p>
-    </section>
 
-    <section class="section">
-        <h2>Tujuan Saya</h2>
-        <div class="cards">
-            <div class="card"><h3>Belajar</h3><p>Memahami dasar pemrograman web secara bertahap.</p></div>
-            <div class="card"><h3>Berkarya</h3><p>Membuat proyek sederhana untuk menambah pengalaman.</p></div>
-            <div class="card"><h3>Berkembang</h3><p>Terus meningkatkan kemampuan melalui praktik.</p></div>
-        </div>
-        <div class="clear"></div>
-    </section>
-</div>
-<footer class="footer"><p>&copy; 2026 My Portfolio</p></footer>
+    <header>
+        <nav>
+            <div class="logo">SamadFaqih.dev</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="card" style="margin-bottom: 2rem;">
+                <p>
+                    Saya adalah mahasiswa Program Studi <strong>Teknik Komputer</strong> di <strong>Universitas Negeri Makassar</strong>. 
+                    Saya memiliki ketertarikan yang mendalam di bidang eksplorasi infrastruktur jaringan komputer serta pengembangan perangkat lunak berbasis web.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Keahlian & Teknologi</h2>
+            <div class="skills-grid">
+                <div class="card">
+                    <h3>Pemrograman Web</h3>
+                    <p style="color: var(--text-muted);">Membuat tampilan dan logika sistem web.</p>
+                    <div class="badge-container">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">PHP</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Jaringan Komputer</h3>
+                    <p style="color: var(--text-muted);">Simulasi dan konfigurasi perangkat jaringan.</p>
+                    <div class="badge-container">
+                        <span class="badge">MikroTik</span>
+                        <span class="badge">GNS3</span>
+                        <span class="badge">VirtualBox</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Bahasa Pemrograman</h3>
+                    <p style="color: var(--text-muted);">Dasar logika dan algoritma pemrograman.</p>
+                    <div class="badge-container">
+                        <span class="badge">C++</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 A.ABD SAMAD FAQIH.H. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

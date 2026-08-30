@@ -1,323 +1,279 @@
+/* RESET & VARIABEL WARNA */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+:root {
+    /* Latar belakang gradient neon modern (Dark Mode dengan Magenta & Cyan Glow) */
+    --bg-gradient: radial-gradient(circle at 10% 20%, #b81c7e 0%, transparent 40%),
+                   radial-gradient(circle at 90% 80%, #0d6efd 0%, transparent 45%),
+                   radial-gradient(circle at 50% 50%, #1a0826 0%, transparent 60%),
+                   #070714;
+    --bg-card: rgba(255, 255, 255, 0.05); /* Kartu semi-transparan (Glassmorphism) */
+    --primary-dark: #070714;
+    --accent-blue: #38bdf8;
+    --accent-pink: #d946ef;
+    --text-dark: #f8fafc; /* Teks disesuaikan jadi terang agar terbaca di latar gelap */
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #30343b;
+    background: var(--bg-gradient);
+    background-attachment: fixed; /* Menjaga gradient tetap di posisinya saat di-scroll */
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.navbar {
-    background: #202735;
-    padding: 0 6%;
-    overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+/* NAVBAR */
+header {
+    background-color: rgba(7, 7, 20, 0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
 }
 
 .logo {
-    float: left;
-    color: white;
-    font-size: 23px;
-    font-weight: bold;
-    padding: 20px 0;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .logo span {
-    color: #f0a04b;
+    color: #38bdf8;
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: right;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
 }
 
-.navbar li {
-    float: left;
-}
-
-.navbar a {
-    display: block;
-    color: #e8ebf0;
+nav a {
+    color: #94a3b8;
     text-decoration: none;
-    padding: 21px 15px;
-    font-size: 14px;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: #f0a04b;
+nav a:hover, nav a.active {
+    color: #ffffff;
 }
 
-.container {
-    width: 88%;
-    max-width: 1050px;
-    margin: auto;
+/* KONTEN UTAMA */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex: 1;
 }
 
+/* HERO SECTION (HOME) - TERTATA SEJAJAR */
 .hero {
-    margin: 45px 0 30px;
-    padding: 55px 45px;
-    background: linear-gradient(135deg, #202735, #30394b);
-    color: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(32,39,53,0.18);
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    text-align: left;
 }
 
-.hero-left {
-    float: left;
-    width: 62%;
-}
-
-.hero-right {
-    float: right;
-    width: 30%;
-    text-align: center;
+.hero-text {
+    flex: 1;
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin: 10px 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
 }
 
-.hero h1 span {
-    color: #f0a04b;
+.hero h2 {
+    font-size: 1.25rem;
+    color: var(--accent-blue);
+    margin-bottom: 1.2rem;
 }
 
 .hero p {
-    color: #dce1e8;
-    line-height: 1.8;
-    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 550px;
 }
 
-.profile {
-    width: 185px;
-    height: 185px;
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* STYLING FOTO PROFIL DI SEBELAH KANAN */
+.profile-img {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 6px solid #f0a04b;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    border: 4px solid var(--accent-pink);
+    box-shadow: 0 0 25px rgba(217, 70, 239, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button {
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.6);
+}
+
+/* BUTTON */
+.btn {
     display: inline-block;
-    margin-top: 12px;
-    padding: 12px 22px;
-    background: #f0a04b;
-    color: #202735;
+    background: linear-gradient(135deg, #d946ef, #2563eb);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 7px;
-    font-weight: bold;
-    border: 2px solid #f0a04b;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(217, 70, 239, 0.3);
 }
 
-.button:hover {
-    background: transparent;
-    color: #f0a04b;
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
-.section {
-    background: white;
-    margin: 28px 0;
-    padding: 32px;
-    border-radius: 14px;
-    border: 1px solid #e3e6eb;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+/* CARDS & GRID */
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    border-bottom: 3px solid var(--accent-pink);
+    display: inline-block;
+    padding-bottom: 0.3rem;
 }
 
-.section h2 {
-    margin-top: 0;
-    color: #202735;
-    border-left: 5px solid #f0a04b;
-    padding-left: 12px;
-}
-
-.section p {
-    line-height: 1.8;
-}
-
-.cards {
-    overflow: hidden;
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .card {
-    float: left;
-    width: 31.33%;
-    margin: 1%;
-    padding: 23px;
-    min-height: 155px;
-    background: #f8f9fb;
-    border: 1px solid #e0e4ea;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #f0a04b;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    background-color: var(--bg-card);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .card h3 {
-    color: #d57c25;
-    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
 }
 
-.skill {
-    margin: 22px 0;
+/* SKILLS BADGE */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
-.skill-name {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.skill-bar {
-    height: 13px;
-    background: #e7eaf0;
+.badge {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 0.4rem 0.8rem;
     border-radius: 20px;
-    overflow: hidden;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.skill-fill {
-    height: 100%;
-    background: #f0a04b;
+/* FORM KONTAK */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.portfolio-item {
-    float: left;
-    width: 48%;
-    margin: 1%;
-    background: #fff;
-    border: 1px solid #e1e5ea;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s;
+.contact-info p {
+    margin-bottom: 1rem;
 }
 
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+.contact-info a {
+    color: var(--accent-blue);
+    text-decoration: none;
 }
 
-.portfolio-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    opacity: 0.92;
+.form-group {
+    margin-bottom: 1.2rem;
 }
 
-.portfolio-item img:hover {
-    opacity: 1;
-}
-
-.portfolio-text {
-    padding: 18px;
-}
-
-.portfolio-text h3 {
-    margin-top: 0;
-    color: #202735;
-}
-
-.contact-box {
-    width: 75%;
-    margin: auto;
-}
-
-.contact-box label {
+.form-group label {
     display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #f8fafc;
 }
 
-.contact-box input,
-.contact-box textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 12px;
-    margin-top: 7px;
-    border: 1px solid #cfd4dc;
-    border-radius: 7px;
-    font-family: Arial, sans-serif;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
     outline: none;
+    color: #ffffff;
 }
 
-.contact-box input:focus,
-.contact-box textarea:focus {
-    border-color: #f0a04b;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-pink);
 }
 
-.contact-box textarea {
-    height: 130px;
-    resize: vertical;
-}
-
-.contact-box input.button {
-    width: auto;
-    cursor: pointer;
-}
-
-.footer {
-    clear: both;
+/* FOOTER */
+footer {
+    background-color: rgba(7, 7, 20, 0.8);
+    color: #94a3b8;
     text-align: center;
-    background: #202735;
-    color: #dce1e8;
-    padding: 25px;
-    margin-top: 45px;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
 }
 
-.clear {
-    clear: both;
-}
-
-@media screen and (max-width: 750px) {
-    .navbar {
+/* RESPONSIF: TAMPILAN HP / LAYAR KECIL */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
         text-align: center;
+        gap: 2rem;
     }
 
-    .logo,
-    .navbar ul,
-    .navbar li {
-        float: none;
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .logo {
-        padding-bottom: 8px;
-    }
-
-    .navbar a {
-        padding: 10px 8px;
-    }
-
-    .hero-left,
-    .hero-right {
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-right {
-        margin-top: 25px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .card,
-    .portfolio-item,
-    .contact-box {
-        width: 100%;
-        margin: 10px 0;
+    .profile-img {
+        width: 160px;
+        height: 160px;
     }
 }

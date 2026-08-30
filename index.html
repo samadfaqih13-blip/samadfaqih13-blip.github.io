@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Portfolio</title>
+    <title>Portofolio - A.ABD SAMAD FAQIH.H</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="logo">My<span>Portfolio</span></div>
-    <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="portfolio.html">Portofolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-<div class="container">
-    <section class="hero">
-        <div class="hero-left">
-            <p>HALO, SELAMAT DATANG</p>
-            <h1>Saya <span>Abdul Samad</span></h1>
-            <p>Mahasiswa Teknik Komputer yang sedang belajar membuat website menggunakan HTML dan CSS.</p>
-            <a class="button" href="portfolio.html">Lihat Portofolio</a>
-        </div>
-        <div class="hero-right">
-            <img class="profile" src="https://via.placeholder.com/185" alt="Foto profil">
-        </div>
-        <div class="clear"></div>
-    </section>
 
-    <section class="section">
-        <h2>Tentang Website Ini</h2>
-        <p>
-            Website ini merupakan portofolio sederhana yang dibuat sebagai latihan
-            HTML dan CSS. Beberapa materi yang digunakan adalah navbar, layout,
-            selector, class, gambar, border, background, dan efek hover.
-        </p>
-    </section>
-</div>
-<footer class="footer"><p>&copy; 2026 My Portfolio</p></footer>
+    <header>
+        <nav>
+            <div class="logo">SamadFaqih.dev</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+    <section class="hero">
+            <div class="hero-text">
+                <h1>A.ABD SAMAD FAQIH.H</h1>
+                <h2>Mahasiswa Teknik Komputer | Universitas Negeri Makassar</h2>
+                <p>Tertarik pada bidang Jaringan Komputer dan Pemrograman Web. Berfokus pada pengembangan sistem backend serta konfigurasi infrastruktur jaringan.</p>
+                <a href="about.html" class="btn">Lihat Profil & Keahlian</a>
+            </div>
+            
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Foto Profil A.ABD SAMAD FAQIH.H" class="profile-img">
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Proyek Unggulan</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>Web Bucket (Order & Inventory)</h3>
+                    <p style="color: var(--text-muted);">
+                        Aplikasi web pengelolaan bucket/pemesanan yang dibangun menggunakan PHP dengan implementasi penuh fitur CRUD (Create, Read, Update, Delete) serta manajemen data pengguna.
+                    </p> <br>
+                    <div class="badge-container">
+                        <span class="badge">PHP</span>
+                        <span class="badge">MySQL</span>
+                        <span class="badge">HTML/CSS</span>
+                        <span class="badge">CRUD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 A.ABD SAMAD FAQIH.H. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

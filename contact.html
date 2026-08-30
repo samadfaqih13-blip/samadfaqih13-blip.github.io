@@ -3,40 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Portfolio</title>
+    <title>Contact Me - A.ABD SAMAD FAQIH.H</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="logo">My<span>Portfolio</span></div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="portfolio.html">Portofolio</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-<div class="container">
-    <section class="section">
-        <h2>Contact Me</h2>
-        <div class="contact-box">
-            <p>Silakan isi form berikut jika ingin menghubungi saya.</p>
-            <form action="#" method="post">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" placeholder="Masukkan nama">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Masukkan email">
+    <header>
+        <nav>
+            <div class="logo">SamadFaqih.dev</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <label for="pesan">Pesan</label>
-                <textarea id="pesan" name="pesan" placeholder="Tulis pesan..."></textarea>
+    <main class="container">
+        <h2 class="section-title">Hubungi Saya</h2>
+        
+        <div class="contact-wrapper">
+            <!-- Info Kontak Teks -->
+            <div class="contact-info">
+                <div class="card">
+                    <h3>Informasi Kontak</h3>
+                    <p style="color: var(--text-muted);">Jangan ragu untuk menghubungi saya melalui detail di bawah ini:</p>
+                    <ul>
+                        <li><strong>Email:</strong> <br> samadfaqih13@gmail.com</li>
+                        <li><strong>Instagram:</strong> <br> @samad.mysql</li>
+                        <li><strong>GitHub:</strong> <br> <a href="https://github.com/samadfaqih13-blip/samadfaqih13-blip.github.io" target="_blank">samadfaqih13-blip</a></li>
+                        <li><strong>Lokasi:</strong> <br> Makassar, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
 
-                <input class="button" type="submit" value="Kirim Pesan">
-            </form>
+            <!-- Form Kontak Visual -->
+            <div class="contact-form">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Pesan berhasil terkirim (Simulasi)!');">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Kirim Pesan</button>
+                </form>
+            </div>
         </div>
-    </section>
-</div>
-<footer class="footer"><p>&copy; 2026 My Portfolio</p></footer>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 A.ABD SAMAD FAQIH.H. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
