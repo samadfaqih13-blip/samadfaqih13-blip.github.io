@@ -1,72 +1,86 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - A.ABD SAMAD FAQIH.H</title>
+    <title>About - MyPortfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">SamadFaqih.dev</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2 class="logo">MyPortfolio</h2>
 
-    <main class="container">
-        <section>
-            <h2 class="section-title">Tentang Saya</h2>
-            <div class="card" style="margin-bottom: 2rem;">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About -->
+    <section class="about">
+        <h1>About Me</h1>
+
+        <div class="about-content">
+
+            <div class="about-text">
+                <h2>Mahasiswa Teknik Komputer</h2>
+
                 <p>
-                    Saya adalah mahasiswa Program Studi <strong>Teknik Komputer</strong> di <strong>Universitas Negeri Makassar</strong>. 
-                    Saya memiliki ketertarikan yang mendalam di bidang eksplorasi infrastruktur jaringan komputer serta pengembangan perangkat lunak berbasis web.
+                    Halo, saya Abdul Samad. Saya merupakan mahasiswa
+                    Teknik Komputer yang memiliki ketertarikan terhadap
+                    teknologi dan pemrograman.
+                </p>
+
+                <p>
+                    Saya sedang mempelajari berbagai bidang seperti
+                    pengembangan website, pemrograman, database,
+                    dan jaringan komputer.
+                </p>
+
+                <h3>Education</h3>
+                <p>
+                    Universitas Negeri Makassar<br>
+                    Program Studi Teknik Komputer
                 </p>
             </div>
-        </section>
 
-        <section>
-            <h2 class="section-title">Keahlian & Teknologi</h2>
-            <div class="skills-grid">
-                <div class="card">
-                    <h3>Pemrograman Web</h3>
-                    <p style="color: var(--text-muted);">Membuat tampilan dan logika sistem web.</p> <br>
-                    <div class="badge-container">
-                        <span class="badge">HTML</span>
-                        <span class="badge">CSS</span>
-                        <span class="badge">PHP</span>
+            <div class="skills">
+                <h2>My Skills</h2>
+
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="skill-bar">
+                        <div class="html"></div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>Jaringan Komputer</h3>
-                    <p style="color: var(--text-muted);">Simulasi dan konfigurasi perangkat jaringan.</p> <br>
-                    <div class="badge-container">
-                        <span class="badge">MikroTik</span>
-                        <span class="badge">GNS3</span>
-                        <span class="badge">VirtualBox</span>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="skill-bar">
+                        <div class="css"></div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>Bahasa Pemrograman</h3>
-                    <p style="color: var(--text-muted);">Dasar logika dan algoritma pemrograman.</p> <br>
-                    <div class="badge-container">
-                        <span class="badge">C++</span>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="javascript"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>Java</span>
+                    <div class="skill-bar">
+                        <div class="java"></div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 A.ABD SAMAD FAQIH.H. All rights reserved.</p>
-    </footer>
-
+        </div>
+    </section>
+    
 </body>
 </html>
